@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="946b7584-f5a6-4569-ad24-75cba836b019" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/livraria_web/controller/LivrariaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/livraria_web/model/Autor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/livraria_web/model/Livro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/livraria_web/repository/AutorRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/livraria_web/repository/LivroRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="946b7584-f5a6-4569-ad24-75cba836b019" name="Changes" comment="criando a estrutura inicial para o projeto com spring">
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +53,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.Application.executor": "Run",
@@ -100,11 +97,24 @@
       <option name="presentableId" value="Default" />
       <updated>1762508992807</updated>
       <workItem from="1762508993855" duration="82000" />
-      <workItem from="1762509077958" duration="762000" />
+      <workItem from="1762509077958" duration="1135000" />
     </task>
+    <task id="LOCAL-00001" summary="criando a estrutura inicial para o projeto com spring">
+      <option name="closed" value="true" />
+      <created>1762510065031</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762510065031</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="criando a estrutura inicial para o projeto com spring" />
+    <option name="LAST_COMMIT_MESSAGE" value="criando a estrutura inicial para o projeto com spring" />
   </component>
 </project>
