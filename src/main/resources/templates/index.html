@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gestão de Livraria (Spring Boot)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .form-section { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; background-color: #f9f9f9; }
+        .form-section h2 { margin-top: 0; }
+        .form-section input[type="text"] { width: 300px; padding: 5px; }
+        .form-section .button { margin-top: 10px; }
+        .form-section .cancel-button { background-color: #aaa; }
+    </style>
+</head>
+<body>
+    <h1>📚 Sistema de Gestão de Livraria (Spring Boot)</h1>
+
+    <div class="form-section">
+        <h2>Gerenciar Autores</h2>
+
+        <form th:action="@{/autores/salvar}" th:object="${autorForm}" method="post">
+
+            <input type="hidden" th:field="*{id}" />
+
+            <label>Nome:</label>
+            <input type="text" th:field="*{nome}" placeholder="Nome do Autor" required/>
+            <br/>
+
+            <button class="button" type="submit" th:text="*{id == null} ? 'Salvar Novo Autor' : 'Atualizar Autor'">Salvar</button>
+            <a th:href="@{/}" th:if="*{id != null}" class="button cancel-button">Cancelar Edição</a>
+        </form>
+
+        <h3>Autores Cadastrados</h3>
+        <table>
+            <thead><tr><th>ID</th><th>Nome</th><th>Ações</th></tr></thead>
+            <tbody>
+                <tr th:each="autor : ${listaAutores}">
+                    <td th:text="${autor.id}">1</td>
+                    <td th:text="${autor.nome}">Nome do Autor</td>
+                    <td>
+                        <a th:href="@{/autores/editar/{id}(id=${autor.id})}">Editar</a>
+                        <a th:href="@{/autores/excluir/{id}(id=${autor.id})}"
+                           onclick="return confirm('Atenção: Excluir um autor excluirá todos os seus livros. Deseja continuar?');">Excluir</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="form-section">
+        <h2>Gerenciar Livros</h2>
+
+        <form th:action="@{/livros/salvar}" th:object="${livroForm}" method="post">
+            <input type="hidden" th:field="*{id}" />
+
+            <div>
+                <label>Título:</label>
+                <input type="text" th:field="*{titulo}" required/>
+            </div>
+            <div>
+                <label>ISBN:</label>
+                <input type="text" th:field="*{isbn}"/>
+            </div>
+            <div>
+                <label>Ano Publicação:</label>
+                <input type="text" th:field="*{anoPublicacao}"/>
+            </div>
+            <div>
+                <label>Autor:</label>
+                <select th:field="*{autor}" required>
+                    <option value="">Selecione um autor...</option>
+                    <option th:each="autor : ${listaAutores}"
+                            th:value="${autor.id}"
+                            th:text="${autor.nome}">Nome do Autor</option>
+                </select>
+            </div>
+
+            <button class="button" type="submit" th:text="*{id == null} ? 'Salvar Novo Livro' : 'Atualizar Livro'">Salvar</button>
+            <a th:href="@{/}" th:if="*{id != null}" class="button cancel-button">Cancelar Edição</a>
+        </form>
+
+        <h3>Livros Cadastrados</h3>
+        <table>
+            <thead><tr><th>Título</th><th>ISBN</th><th>Ano</th><th>Autor</th><th>Ações</th></tr></thead>
+            <tbody>
+                <tr th:each="livro : ${listaLivros}">
+                    <td th:text="${livro.titulo}">Título do Livro</td>
+                    <td th:text="${livro.isbn}">123456789</td>
+                    <td th:text="${livro.anoPublicacao}">2025</td>
+                    <td th:text="${livro.autor.nome}">Nome do Autor</td>
+                    <td>
+                        <a th:href="@{/livros/editar/{id}(id=${livro.id})}">Editar</a>
+                        <a th:href="@{/livros/excluir/{id}(id=${livro.id})}"
+                           onclick="return confirm('Deseja realmente excluir este livro?');">Excluir</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
