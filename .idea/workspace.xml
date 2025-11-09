@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="946b7584-f5a6-4569-ad24-75cba836b019" name="Changes" comment="tirando as dependências do spring secutiry para simplificar os testes, confirmando o funcionamento do crud inicial">
+    <list default="true" id="946b7584-f5a6-4569-ad24-75cba836b019" name="Changes" comment="adicionando o script de inicialização do banco">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/script_livraria.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/script_livraria.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +101,8 @@
       <workItem from="1762508993855" duration="82000" />
       <workItem from="1762509077958" duration="1476000" />
       <workItem from="1762510567521" duration="12000" />
-      <workItem from="1762598841952" duration="1188000" />
+      <workItem from="1762598841952" duration="1706000" />
+      <workItem from="1762683823799" duration="343000" />
     </task>
     <task id="LOCAL-00001" summary="criando a estrutura inicial para o projeto com spring">
       <option name="closed" value="true" />
@@ -118,7 +120,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762510480710</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="adicionando a documentação no README.md">
+      <option name="closed" value="true" />
+      <created>1762601615659</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1762601615659</updated>
+    </task>
+    <task id="LOCAL-00004" summary="adicionando o script de inicialização do banco">
+      <option name="closed" value="true" />
+      <created>1762601811214</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1762601811214</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +145,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="criando a estrutura inicial para o projeto com spring" />
     <MESSAGE value="tirando as dependências do spring secutiry para simplificar os testes, confirmando o funcionamento do crud inicial" />
-    <option name="LAST_COMMIT_MESSAGE" value="tirando as dependências do spring secutiry para simplificar os testes, confirmando o funcionamento do crud inicial" />
+    <MESSAGE value="adicionando a documentação no README.md" />
+    <MESSAGE value="adicionando o script de inicialização do banco" />
+    <option name="LAST_COMMIT_MESSAGE" value="adicionando o script de inicialização do banco" />
   </component>
 </project>
